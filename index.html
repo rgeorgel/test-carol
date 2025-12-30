@@ -13,33 +13,56 @@
 
         <div class="card">
             <div class="card-inner">
-                <svg class="card-image" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#FF6B6B;stop-opacity:1" />
-                            <stop offset="50%" style="stop-color:#4ECDC4;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#45B7D1;stop-opacity:1" />
-                        </linearGradient>
-                        <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
-                            <stop offset="0%" style="stop-color:#FFD93D;stop-opacity:0.3" />
-                            <stop offset="100%" style="stop-color:#6BCB77;stop-opacity:0.3" />
-                        </linearGradient>
-                    </defs>
+                <!-- Background layer - moves slowest -->
+                <div class="parallax-layer background-layer" data-speed="0.3">
+                    <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#FF6B6B;stop-opacity:1" />
+                                <stop offset="50%" style="stop-color:#4ECDC4;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#45B7D1;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="600" height="400" fill="url(#bgGrad)"/>
+                    </svg>
+                </div>
 
-                    <rect width="600" height="400" fill="url(#grad1)"/>
-                    <circle cx="150" cy="100" r="80" fill="url(#grad2)"/>
-                    <circle cx="450" cy="300" r="100" fill="url(#grad2)"/>
-                    <circle cx="500" cy="80" r="60" fill="url(#grad2)"/>
+                <!-- Middle layer 1 - medium speed -->
+                <div class="parallax-layer middle-layer-1" data-speed="0.5">
+                    <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="150" cy="100" r="80" fill="rgba(255, 217, 61, 0.4)"/>
+                        <circle cx="500" cy="80" r="60" fill="rgba(107, 203, 119, 0.4)"/>
+                    </svg>
+                </div>
 
-                    <text x="300" y="180" font-family="Arial, sans-serif" font-size="48"
-                          font-weight="bold" fill="white" text-anchor="middle">
-                        3D Effect Demo
-                    </text>
-                    <text x="300" y="230" font-family="Arial, sans-serif" font-size="24"
-                          fill="rgba(255,255,255,0.9)" text-anchor="middle">
-                        Move your mouse around!
-                    </text>
-                </svg>
+                <!-- Middle layer 2 - faster speed -->
+                <div class="parallax-layer middle-layer-2" data-speed="0.7">
+                    <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="450" cy="300" r="100" fill="rgba(255, 255, 255, 0.3)"/>
+                    </svg>
+                </div>
+
+                <!-- Text layer - medium-fast speed -->
+                <div class="parallax-layer text-layer" data-speed="0.6">
+                    <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+                        <text x="300" y="180" font-family="Arial, sans-serif" font-size="48"
+                              font-weight="bold" fill="white" text-anchor="middle">
+                            3D Effect Demo
+                        </text>
+                        <text x="300" y="230" font-family="Arial, sans-serif" font-size="24"
+                              fill="rgba(255,255,255,0.9)" text-anchor="middle">
+                            Move your mouse around!
+                        </text>
+                    </svg>
+                </div>
+
+                <!-- Foreground layer - moves fastest -->
+                <div class="parallax-layer foreground-layer" data-speed="1">
+                    <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="100" cy="350" r="40" fill="rgba(255, 255, 255, 0.6)"/>
+                        <circle cx="520" cy="320" r="50" fill="rgba(255, 255, 255, 0.5)"/>
+                    </svg>
+                </div>
             </div>
         </div>
     </div>
