@@ -13,9 +13,33 @@
 
         <div class="card">
             <div class="card-inner">
-                <img src="https://via.placeholder.com/600x400/4A90E2/ffffff?text=3D+Effect+Demo"
-                     alt="Demo Image"
-                     class="card-image">
+                <svg class="card-image" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#FF6B6B;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#4ECDC4;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#45B7D1;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#FFD93D;stop-opacity:0.3" />
+                            <stop offset="100%" style="stop-color:#6BCB77;stop-opacity:0.3" />
+                        </linearGradient>
+                    </defs>
+
+                    <rect width="600" height="400" fill="url(#grad1)"/>
+                    <circle cx="150" cy="100" r="80" fill="url(#grad2)"/>
+                    <circle cx="450" cy="300" r="100" fill="url(#grad2)"/>
+                    <circle cx="500" cy="80" r="60" fill="url(#grad2)"/>
+
+                    <text x="300" y="180" font-family="Arial, sans-serif" font-size="48"
+                          font-weight="bold" fill="white" text-anchor="middle">
+                        3D Effect Demo
+                    </text>
+                    <text x="300" y="230" font-family="Arial, sans-serif" font-size="24"
+                          fill="rgba(255,255,255,0.9)" text-anchor="middle">
+                        Move your mouse around!
+                    </text>
+                </svg>
             </div>
         </div>
     </div>
